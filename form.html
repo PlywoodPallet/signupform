@@ -214,38 +214,41 @@
                 <ul>
                     <li>
                         <label for="first_name">first name</label>
-                        <input type="text" id="first_name" name="first_name">
+                        <input type="text" id="first_name" name="first_name" required>
                     </li>
                     <li>
                         <label for="last_name">last name</label>
-                        <input type="text" id="last_name" name="last_name">
+                        <input type="text" id="last_name" name="last_name" required>
                     </li>
                     <!-- TODO: dissappearing placeholder for email, phone number -->
                     <li>
                         <label for="email">email</label>
-                        <input type="email" id="email" name="email">
+                        <input type="email" id="email" name="email" placeholder="me@you.com" required>
                     </li>
                     <li>
                         <label for="phone">phone</label>
-                        <input type="number" id="phone" name="phone">
+                        <input type="tel" id="phone" name="phone" pattern="^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$" placeholder="555-555-5555" required>
                     </li>
                 </ul>
                 <!-- Password and confirm password are always on a separate line  -->
                 <ul>
                     <li>
                         <label for="password">password</label>
-                        <input type="password" id="password" name="password">
+                        <input type="password" id="password" name="password" minlength="6" placeholder="6 character minimum" required>
                     </li>
 
                     <li>
                         <label for="password">confirm password</label>
-                        <input type="password" id="password" name="password">
+                        <input type="password" id="password-confirmation" name="password-confirmation" required>
+                        <input type="submit" id="submit-form" class="hidden" style="display:none">
                     </li>
                 </ul>
             </form>
         </div>
         <div id="footer">
-            <button type="submit">Create Account</button>
+            <button type="submit">
+                <label for="submit-form" class="button">Create Account</label>
+            </button>
             <p>Already have an account? <a href="#">Log in</a></p>
         </div>
     </div>
