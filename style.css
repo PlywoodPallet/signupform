@@ -1,0 +1,183 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --mean-green: #596D48;
+    --lighter-gray: #E5E7EB;
+}
+
+@font-face {
+    font-family: "Norse-Bold";
+    src: local("Norse-Bold"),
+        url("Norse-Bold.otf") format("opentype");
+}
+
+body {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+ul {
+    display: inline;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+p {
+    padding: 12px 0;
+}
+
+a {
+    color: var(--mean-green);
+    text-decoration: none;
+    font-weight:bold;
+}
+
+img {  
+    max-width: 100%;  
+    height: auto;  
+}  
+
+button {
+    font-weight:bold;
+    font-size: 1em;
+    
+    background-color: var(--mean-green);
+    color:white;
+    border: 0px;
+    padding-left: 3em;
+    padding-right: 3em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    border-radius: 12px;
+
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* Make background image responsive using CSS Functions */
+
+div#splash-image {
+    background-image: url("splash.jpg");
+    background-repeat: round;
+    height: 100vh;
+    width: 30vw;
+}
+
+div#logo-container {
+    display:flex;
+
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 20vh;
+    width: 30vw;
+
+    margin-top: 25vh;
+    /* position: absolute;
+    top:20vh; */
+
+    justify-content: center;
+    align-items: center;
+    
+}
+
+img#logo-image {
+    width: auto;
+    height: 18vh;
+}
+
+/* text needs to get smaller on smaller windows */
+div#logo-text {
+    font-size: 7em;
+    color:white;
+    font-family: 'Norse-Bold', 'Impact', 'Gil Sans';
+
+}
+
+div#attribution {
+    color: white;
+    position: absolute;
+    width: 30vw;
+    bottom: 0;
+    padding-bottom: 1em;
+    text-align: center;
+
+    font-size: 0.75rem;
+}
+
+div#attribution a {
+    color: white;
+    text-decoration: underline;
+
+}
+
+/* make the padding top collapse on smaller windows */
+div#content {
+    width: 70vw;
+    padding-top: 20vh;
+}
+
+div#info {
+    padding-left: 1rem;
+
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+div#form {
+    padding-left: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin: 0;
+
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+div#form ul {
+    display:flex;
+    flex-wrap: wrap;
+
+}
+
+div#form li {
+    padding-right: 2rem;
+    padding-bottom: 1rem;
+}
+
+form {
+    padding: 12px 0;
+}
+
+form label {
+    display: block;
+    text-transform: uppercase;
+    padding-bottom: 0.25rem;
+}
+
+form input {
+    border-color: var(--lighter-gray);
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 4px;
+    padding: 0.5rem;
+}
+
+input:focus {
+    outline: none;
+    border: solid 1px darkblue;
+    box-shadow: 3px 3px 5px var(--lighter-gray);;
+}
+
+div#footer {
+    padding-left: 1rem;
+    padding-top: 1rem;
+    margin: 0;
+}
