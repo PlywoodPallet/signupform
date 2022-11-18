@@ -16,6 +16,12 @@
         --mean-green: #596D48;
         --lighter-gray: #E5E7EB;
     }
+
+    @font-face {
+        font-family: "Norse-Bold";
+        src: local("Norse-Bold"),
+            url("Norse-Bold.otf") format("opentype");
+    }
     
     body {
         display: flex;
@@ -98,8 +104,10 @@
 
     /* text needs to get smaller on smaller windows */
     div#logo-text {
-        font-size: 6em;
+        font-size: 7em;
         color:white;
+        font-family: 'Norse-Bold', 'Impact', 'Gil Sans';
+
     }
 
     div#attribution {
