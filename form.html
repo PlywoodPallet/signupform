@@ -11,6 +11,11 @@
         padding: 0;
         box-sizing: border-box;
     }
+
+    :root {
+        --mean-green: #596D48;
+        --lighter-gray: #E5E7EB;
+    }
     
     body {
         display: flex;
@@ -29,13 +34,13 @@
     h2 {
         margin-top: 0;
     }
-    
+
     p {
         padding: 12px 0;
     }
     
     a {
-        color: #596D48;
+        color: var(--mean-green);
         text-decoration: none;
         font-weight:bold;
     }
@@ -49,7 +54,7 @@
         font-weight:bold;
         font-size: 1em;
         
-        background-color: #596D48;
+        background-color: var(--mean-green);
         color:white;
         border: 0px;
         padding-left: 3em;
@@ -146,6 +151,29 @@
     form label {
         display: block;
         text-transform: uppercase;
+        padding-bottom: 0.25rem;
+    }
+
+    form input {
+        border-color: var(--lighter-gray);
+        border-width: 1px;
+        border-style: solid;
+        border-radius: 4px;
+        padding: 0.5rem;
+    }
+
+    /* not working as intended. Border seems to be inside */
+    /* form input:focus {
+        border-color: lightblue;
+        border-width: 1px;
+        border-style: solid;
+        border-radius: 4px;
+    } */
+
+    input:focus {
+        outline: none;
+        border: solid 1px darkblue;
+        box-shadow: 3px 3px 5px var(--lighter-gray);;
     }
 
     div#footer {
